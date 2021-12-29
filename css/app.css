@@ -1,0 +1,275 @@
+/* Variables */
+
+:root {
+  --very-dark-magenta: hsl(300, 43%, 22%);
+  --soft-pink: hsl(333, 80%, 67%);
+  --dark-grayish-magenta: hsl(303, 10%, 53%);
+  --light-grayish-magenta: hsl(300, 24%, 96%);
+
+  --white: hsl(0, 0%, 100%);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: "Spartan", sans-serif;
+  font-size: 62.5%;
+}
+
+body {
+  line-height: 1.5;
+}
+/* Container */
+.container {
+  width: 100%;
+  min-width: 320px;
+  height: 100vh;
+  background-color: var(--white);
+}
+
+/* Sección principal */
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.title-info {
+  text-align: center;
+  padding: 0 47px;
+}
+
+.title-info h1 {
+  margin-top: 40px;
+  color: var(--very-dark-magenta);
+  font-size: 2.5rem;
+  line-height: 1;
+}
+
+.title-info p {
+  margin-top: 20px;
+  color: var(--dark-grayish-magenta);
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+/* Sección calificación */
+.rated-section {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.rated-section--card {
+  width: 80%;
+  margin: 12px auto;
+  padding: 14px 0;
+  background-color: var(--light-grayish-magenta);
+  border-radius: 4px;
+}
+
+.rated-section--card p {
+  margin-top: 4px;
+  color: var(--very-dark-magenta);
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+/* cards */
+
+.cards-section {
+  margin-top: 20px;
+}
+
+.testimonial-card {
+  width: 80%;
+  margin: 12px auto;
+  padding: 30px 40px;
+  background-color: var(--very-dark-magenta);
+  border-radius: 8px;
+}
+
+.info-profile {
+  display: flex;
+  align-items: center;
+}
+
+.info-profile img {
+  width: 30px;
+  height: 30px;
+  margin-right: 20px;
+  border-radius: 50%;
+}
+
+.name p {
+  color: var(--white);
+  font-weight: 700;
+}
+
+.name span {
+  color: var(--soft-pink);
+}
+
+.testimonial-card p:last-child {
+  margin-top: 20px;
+  text-align: left;
+  color: var(--white);
+  padding: 0 8px;
+  letter-spacing: 0.2px;
+  line-height: 1.6;
+}
+
+/* mediaqueries */
+
+@media (min-width: 550px) {
+  .rated-section--card {
+    width: 70%;
+  }
+  .testimonial-card {
+    width: 70%;
+  }
+}
+
+/* ipad */
+@media (min-width: 768px) {
+  .title-info {
+    padding: 0 200px;
+  }
+
+  .rated-section--card {
+    width: 50%;
+  }
+  .testimonial-card {
+    width: 50%;
+  }
+}
+
+/* laptop */
+@media (min-width: 1200px) {
+  .container {
+    width: 85%;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin: 0 auto;
+  }
+
+  /* Sección principal */
+
+  .main-container {
+    flex-direction: row;
+    margin-top: 100px;
+    align-items: center;
+  }
+
+  .title-info {
+    width: 42%;
+    padding: 0;
+  }
+
+  .title-info h1 {
+    font-size: 4rem;
+    margin: 0;
+    text-align: justify;
+    padding-right: 100px;
+  }
+
+  .title-info p {
+    text-align: justify;
+    font-size: 1.4rem;
+    font-weight: 500;
+    padding-right: 85px;
+  }
+
+  .rated-section {
+    display: flex;
+    flex-direction: column;
+    width: 58%;
+    margin: 0;
+  }
+
+  .rated-section--card {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 60%;
+  }
+
+  .container-stars {
+    margin-left: 20px;
+  }
+  .rated-section--card p {
+    margin-left: 40px;
+  }
+
+  .rated-section--card:nth-child(2) {
+    margin-left: 250px;
+  }
+
+  .rated-section--card:nth-child(3) {
+    margin-left: 300px;
+  }
+
+  /* cards */
+
+  .cards-section {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-top: 80px;
+  }
+
+  .testimonial-card {
+    width: 30%;
+    margin: 0 14px;
+    padding: 60px 40px;
+  }
+
+  .info-profile img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .name p,
+  .name span {
+    font-size: 1.5rem;
+  }
+
+  .testimonial-card p:last-child {
+    font-size: 1.3rem;
+  }
+
+  .testimonial-card:nth-child(2) {
+    margin-top: 40px;
+  }
+
+  .testimonial-card:nth-child(3) {
+    margin-top: 80px;
+  }
+}
+
+/* +1400px */
+
+@media (min-width: 1300px) {
+  .container {
+    width: 70%;
+  }
+
+  .title-info {
+    width: 40%;
+  }
+
+  .rated-section {
+    width: 60%;
+  }
+
+  .title-info h1 {
+    font-size: 5rem;
+  }
+
+  .title-info p {
+    font-style: 1.6rem;
+  }
+}
